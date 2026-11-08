@@ -1,0 +1,67 @@
+{
+  "python": "3.12.14",
+  "torch": "2.15.0+cpu",
+  "numpy": "2.5.4",
+  "canonical_data_sha256": "160e55387fbe5984917615977b3b85c5a200d87b1ff73f2f5065da0e040609a9",
+  "split_seed": 155104,
+  "training_seed": [
+    11,
+    22,
+    33
+  ],
+  "selection_flight_indices_sha256": "a1ca816bb3ef2bc54ea55cdb270d7a7c05e458425de5ff93623428bb360f5c5f",
+  "calibration_flight_indices_sha256": "28c925b551ad5512d094a160c98dfe577acb97997282442e087566e9693a7988",
+  "n_train": 33367,
+  "n_selection": 2090,
+  "n_calibration": 2089,
+  "fresh_seed": 155107,
+  "fresh_generated": 6000,
+  "noise_seed_base": {
+    "selection": 18100,
+    "calibration": 28100,
+    "p0_test": 9100,
+    "fresh_test": 38100,
+    "robustness": 48100
+  },
+  "levels_mm": [
+    2,
+    5,
+    10,
+    15
+  ],
+  "hdr_samples": 512,
+  "selection_rule": "Simpler candidate if paired mean NLL delta <= paired seed SD and mean absolute coverage gap worsens by <= 0.015.",
+  "robustness": {
+    "sigma_mm": 5,
+    "wind_y_m_per_s": 3,
+    "spin_decay_time_s": 0.5,
+    "paired": "same launch parameters, common airborne crossing and same observation noise"
+  },
+  "architecture": {
+    "depths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "depth_screen_activation": "SiLU",
+    "activations": [
+      "SiLU",
+      "GELU",
+      "ReLU",
+      "Tanh"
+    ],
+    "interventions": {
+      "rho_zero": {
+        "correlation": false
+      },
+      "fixed_lr": {
+        "cosine": false
+      },
+      "fixed_noise": {
+        "dynamic_noise": false
+      }
+    },
+    "selection": "Lowest mean validation NLL, prefer shallower depth or original SiLU when inside paired seed SD and passing the same coverage guard."
+  }
+}

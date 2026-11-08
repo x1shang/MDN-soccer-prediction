@@ -1,0 +1,7 @@
+case,model,sigma_mm,error_cm,assessment
+Fig3,fresh,10,24.041859567095134,Retrospective; trial contributed to fresh simulation prior
+Fig3,frozen_p1,10,54.49161175270678,Retrospective; trial contributed to fresh simulation prior
+Sample05,fresh,10,29.88565479461691,Retrospective; trial contributed to fresh simulation prior
+Sample05,frozen_p1,10,49.87235158198885,Retrospective; trial contributed to fresh simulation prior
+Sample12,fresh,10,30.874339003123303,Retrospective; trial contributed to fresh simulation prior
+Sample12,frozen_p1,10,59.57463253318451,Retrospective; trial contributed to fresh simulation prior

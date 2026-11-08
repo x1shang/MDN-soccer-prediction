@@ -1,0 +1,320 @@
+{
+  "prior": "Canonical uniform launch prior; different from the v3 mixture",
+  "likelihood": "Independent Gaussian coordinate errors. The two frames are modelled before first contact.",
+  "scope": "Finite importance sample. Numerical zero does not establish a probability bound.",
+  "proposals_per_stage": 30000,
+  "rows": [
+    {
+      "sigma_mm": 2,
+      "seed": 155313,
+      "ess": 102.25076779898987,
+      "direct_crossing": 0.9999999999999996,
+      "ground_first_mass": 0.0,
+      "positive_ground_rows": 0,
+      "direct_in_frame": 0.999883932086796,
+      "scenarios": {
+        "baseline": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.999883932086796
+        },
+        "restitution_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.999883932086796
+        },
+        "restitution_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.999883932086796
+        },
+        "friction_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.999883932086796
+        },
+        "friction_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.999883932086796
+        },
+        "rolling_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.999883932086796
+        },
+        "rolling_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.999883932086796
+        }
+      }
+    },
+    {
+      "sigma_mm": 2,
+      "seed": 155314,
+      "ess": 69.96629575931877,
+      "direct_crossing": 1.0000000000000013,
+      "ground_first_mass": 0.0,
+      "positive_ground_rows": 0,
+      "direct_in_frame": 0.9997021684716109,
+      "scenarios": {
+        "baseline": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9997021684716109
+        },
+        "restitution_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9997021684716109
+        },
+        "restitution_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9997021684716109
+        },
+        "friction_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9997021684716109
+        },
+        "friction_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9997021684716109
+        },
+        "rolling_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9997021684716109
+        },
+        "rolling_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9997021684716109
+        }
+      }
+    },
+    {
+      "sigma_mm": 5,
+      "seed": 155313,
+      "ess": 2132.0065859401047,
+      "direct_crossing": 1.0000000000000004,
+      "ground_first_mass": 0.0,
+      "positive_ground_rows": 0,
+      "direct_in_frame": 0.9116747480715731,
+      "scenarios": {
+        "baseline": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9116747480715731
+        },
+        "restitution_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9116747480715731
+        },
+        "restitution_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9116747480715731
+        },
+        "friction_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9116747480715731
+        },
+        "friction_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9116747480715731
+        },
+        "rolling_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9116747480715731
+        },
+        "rolling_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.9116747480715731
+        }
+      }
+    },
+    {
+      "sigma_mm": 5,
+      "seed": 155314,
+      "ess": 1767.0758983472865,
+      "direct_crossing": 1.000000000000001,
+      "ground_first_mass": 0.0,
+      "positive_ground_rows": 0,
+      "direct_in_frame": 0.902773204891216,
+      "scenarios": {
+        "baseline": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.902773204891216
+        },
+        "restitution_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.902773204891216
+        },
+        "restitution_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.902773204891216
+        },
+        "friction_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.902773204891216
+        },
+        "friction_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.902773204891216
+        },
+        "rolling_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.902773204891216
+        },
+        "rolling_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.902773204891216
+        }
+      }
+    },
+    {
+      "sigma_mm": 10,
+      "seed": 155313,
+      "ess": 2985.838868641245,
+      "direct_crossing": 0.9999999999999997,
+      "ground_first_mass": 0.0,
+      "positive_ground_rows": 0,
+      "direct_in_frame": 0.7682018923722341,
+      "scenarios": {
+        "baseline": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7682018923722341
+        },
+        "restitution_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7682018923722341
+        },
+        "restitution_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7682018923722341
+        },
+        "friction_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7682018923722341
+        },
+        "friction_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7682018923722341
+        },
+        "rolling_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7682018923722341
+        },
+        "rolling_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7682018923722341
+        }
+      }
+    },
+    {
+      "sigma_mm": 10,
+      "seed": 155314,
+      "ess": 3791.789003791609,
+      "direct_crossing": 0.9999999999999997,
+      "ground_first_mass": 0.0,
+      "positive_ground_rows": 0,
+      "direct_in_frame": 0.7605208285660574,
+      "scenarios": {
+        "baseline": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7605208285660574
+        },
+        "restitution_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7605208285660574
+        },
+        "restitution_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7605208285660574
+        },
+        "friction_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7605208285660574
+        },
+        "friction_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7605208285660574
+        },
+        "rolling_low": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7605208285660574
+        },
+        "rolling_high": {
+          "additional_in_frame": 0.0,
+          "total_in_frame": 0.7605208285660574
+        }
+      }
+    },
+    {
+      "sigma_mm": 15,
+      "seed": 155313,
+      "ess": 4385.445472798331,
+      "direct_crossing": 1.0,
+      "ground_first_mass": 8.138535076627233e-191,
+      "positive_ground_rows": 21,
+      "direct_in_frame": 0.6871203739627247,
+      "scenarios": {
+        "baseline": {
+          "additional_in_frame": 8.138535076627233e-191,
+          "total_in_frame": 0.6871203739627247
+        },
+        "restitution_low": {
+          "additional_in_frame": 8.138535076627233e-191,
+          "total_in_frame": 0.6871203739627247
+        },
+        "restitution_high": {
+          "additional_in_frame": 8.138535076627233e-191,
+          "total_in_frame": 0.6871203739627247
+        },
+        "friction_low": {
+          "additional_in_frame": 8.138535076627233e-191,
+          "total_in_frame": 0.6871203739627247
+        },
+        "friction_high": {
+          "additional_in_frame": 8.138535076627233e-191,
+          "total_in_frame": 0.6871203739627247
+        },
+        "rolling_low": {
+          "additional_in_frame": 8.138535076627233e-191,
+          "total_in_frame": 0.6871203739627247
+        },
+        "rolling_high": {
+          "additional_in_frame": 8.138535076627233e-191,
+          "total_in_frame": 0.6871203739627247
+        }
+      }
+    },
+    {
+      "sigma_mm": 15,
+      "seed": 155314,
+      "ess": 4388.368087693289,
+      "direct_crossing": 1.0000000000000002,
+      "ground_first_mass": 4.2894051516043706e-175,
+      "positive_ground_rows": 21,
+      "direct_in_frame": 0.665717139230434,
+      "scenarios": {
+        "baseline": {
+          "additional_in_frame": 4.289405147711624e-175,
+          "total_in_frame": 0.665717139230434
+        },
+        "restitution_low": {
+          "additional_in_frame": 4.289405147711624e-175,
+          "total_in_frame": 0.665717139230434
+        },
+        "restitution_high": {
+          "additional_in_frame": 4.289405147711624e-175,
+          "total_in_frame": 0.665717139230434
+        },
+        "friction_low": {
+          "additional_in_frame": 4.289405147711624e-175,
+          "total_in_frame": 0.665717139230434
+        },
+        "friction_high": {
+          "additional_in_frame": 4.289405147711624e-175,
+          "total_in_frame": 0.665717139230434
+        },
+        "rolling_low": {
+          "additional_in_frame": 4.289405147711624e-175,
+          "total_in_frame": 0.665717139230434
+        },
+        "rolling_high": {
+          "additional_in_frame": 4.289405147711624e-175,
+          "total_in_frame": 0.665717139230434
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Preserve exact file bytes on every platform so that SHA256SUMS stays valid
+# (Git for Windows sets core.autocrlf=true by default, which would otherwise
+# rewrite LF-only text files on checkout).
+* -text

@@ -1,0 +1,53 @@
+{
+  "dataset_sha256": "00cb3e8199eb21bb57ce5b90e2400810d269255ef8ac1070701b6e9be07a3295",
+  "checkpoint_sha256": "bddd96c98eb29af0466b431d35083f8468d31f2f65c3ee2ec248f69907951e66",
+  "old_checkpoint_sha256": "0a5fc31a616c61b2a433193672d9761ee32367b532c540bea58355894a324c85",
+  "architecture": {
+    "depth": 3,
+    "activation": "GELU"
+  },
+  "features": "phys_reduced",
+  "k": 3,
+  "epochs": 100,
+  "seed": 11,
+  "parameters": 37650,
+  "seconds": 79.04584459999751,
+  "sizes": {
+    "train": 33810,
+    "selection": 2105,
+    "calibration": 2105,
+    "test": 4234
+  },
+  "selected_epoch": 93,
+  "calibration": {
+    "2": {
+      "scale_sd": 1.0161770659694815,
+      "hdr_mass": {
+        "0.5": 0.501953125,
+        "0.95": 0.94140625
+      }
+    },
+    "5": {
+      "scale_sd": 0.9950500293300952,
+      "hdr_mass": {
+        "0.5": 0.505859375,
+        "0.95": 0.9453125
+      }
+    },
+    "10": {
+      "scale_sd": 0.9960423349347863,
+      "hdr_mass": {
+        "0.5": 0.5234375,
+        "0.95": 0.9453125
+      }
+    },
+    "15": {
+      "scale_sd": 1.0197038186843717,
+      "hdr_mass": {
+        "0.5": 0.537109375,
+        "0.95": 0.935546875
+      }
+    }
+  },
+  "evaluation": "Synthetic holdout from the same fitted prior, conditional on airborne crossing"
+}
