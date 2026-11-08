@@ -5,7 +5,7 @@ where the code expects them, verifying SHA-256 for every file.
     powershell -ExecutionPolicy Bypass -File code\scripts\fetch_data.ps1
     powershell -ExecutionPolicy Bypass -File code\scripts\fetch_data.ps1 -Force     # re-download
 
-Files already present with the right hash are skipped. Size on disk is about 445 MB.
+Files already present with the right hash are skipped. Size on disk is about 465 MB.
 If GitHub is unreachable directly, set $env:HTTPS_PROXY first, e.g.
     $env:HTTPS_PROXY = 'http://127.0.0.1:10809'
 #>

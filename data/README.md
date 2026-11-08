@@ -23,8 +23,10 @@ Upstream licences and the role each source plays in the prior are in [`SOURCES.m
 
 ## 2. Simulated datasets (Release assets)
 
-Five `.npz` files are published as assets of the **`data-v1.0`** release. They are not stored in
-Git because GitHub rejects files above 100 MB and the three main banks are ~140 MB each.
+Five `.npz` files are published as assets of the
+**[`data-v1.0`](https://github.com/x1shang/MDN-soccer-prediction/releases/tag/data-v1.0)** release.
+They are not stored in Git because GitHub rejects files above 100 MB and the three main banks are
+~140 MB each.
 
 | Release asset | Rows (`n`) | Bytes | SHA-256 | Lands at |
 | --- | ---: | ---: | --- | --- |

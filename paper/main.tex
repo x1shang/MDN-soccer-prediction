@@ -81,7 +81,7 @@ From two early positions of a penalty kick, we estimate where the ball crosses t
 
 For the stated kick at an assumed $5\,\mathrm{mm}$ coordinate noise, the model gives a mode of $(Y,Z)=(2.67,1.79)\,\mathrm{m}$ and joint $50\%$ and $95\%$ region areas of $0.106$ and $0.619\,\mathrm{m^2}$. Conditional on airborne crossing, the estimated probability of crossing within a goal rectangle inset by one ball radius is $97.7\%$.
 
-Of $1{,}225{,}000$ simulated launches, $1{,}091{,}052$ cross in flight. On $109{,}108$ held-out crossings the median error is $0.266\,\mathrm{m}$ at $5\,\mathrm{mm}$, and joint coverage is $50.1\%$ and $95.1\%$. Aiming increases simulated high-speed in-frame coverage, with little change in error on shared uniform-prior test flights or on three Asai kicks withheld from the prior. In a separate paired experiment, including rebound and rolling crossings in training reduces median error on post-contact crossings from $0.242$ to $0.163\,\mathrm{m}$ at $5\,\mathrm{mm}$.
+Of $1{,}225{,}000$ simulated launches, $1{,}091{,}052$ cross in flight. On $109{,}108$ held-out crossings the median error is $0.266\,\mathrm{m}$ at $5\,\mathrm{mm}$, and joint coverage is $50.1\%$ and $95.1\%$. Aiming fills the high-speed sampling grid more densely. Point errors change little on shared uniform-prior flights and on three Asai kicks evaluated with the two models trained without Asai anchors. In a separate paired experiment, including rebound and rolling crossings in training reduces median error on post-contact crossings from $0.242$ to $0.163\,\mathrm{m}$ at $5\,\mathrm{mm}$.
 
 \clearpage
 \tableofcontents
@@ -102,7 +102,7 @@ Unknown spin and aerodynamic forces make extrapolation from two points ambiguous
 
 Wind-tunnel tests of non-spinning balls found drag coefficients near $0.43$ and $0.15$ on either side of the drag crisis, at Reynolds numbers around $2.2$--$3.0\times10^5$ \cite{asai2007}. A later ball comparison reached $3.3\times10^5$ \cite{asai2013}. Free-kick fits give $C_D=0.25$--$0.30$. In the same study ten free kicks had speeds of $23.0$--$28.3\,\mathrm{m\,s^{-1}}$ at $0.1\,\mathrm{s}$ \cite{bray2003}. Trajectory studies find lift coefficients of order $0.2$--$0.3$ under some conditions and estimate aerodynamic curves from tracked flights \cite{goff2010,goff2017}. These results inform our choices of prior bounds and lift law.
 
-We compare a quadratic extrapolation, a Bayesian reference and an MDN \cite{bishop1994} under shared flight dynamics. We fit simulation priors using tracked Asai, ISSIA-3D and DFL trajectories and digitised Barber--Carr\'e data \cite{asai2020,soccernetv3d,issia,dfl2025,barber2010}. Held-out simulations assess coverage. A separate source holdout tests transfer to the three Asai kicks.
+We compare a quadratic extrapolation, a Bayesian reference and an MDN \cite{bishop1994} under shared flight dynamics. We fit simulation priors using tracked Asai, ISSIA-3D and DFL trajectories and digitised Barber--Carr\'e data \cite{asai2020,soccernetv3d,issia,dfl2025,barber2010}. Held-out simulations assess coverage. We assess transfer to the three Asai kicks using reduced-mixture models trained without their anchors.
 
 \section{Materials and Methods}
 \subsection{Assumptions and Approximations}
@@ -246,7 +246,7 @@ For architecture screening, we compare 11 and 16 physical inputs for the direct 
 \subsection{Answer for the Stated Kick}
 \label{sec:case}
 
-The quadratic baseline gives $T=0.405\,\mathrm{s}$ and $(Y,Z)=(2.495,1.920)\,\mathrm{m}$ (Appendix~\ref{app:noise}). At $\sigma=5\,\mathrm{mm}$, the calibrated full-mixture MDN (seed 11) gives a mode of $(2.666,1.792)\,\mathrm{m}$ and a mean of $(2.711,1.859)\,\mathrm{m}$. The mode heights for seeds 42 and 155 are approximately $1.83$ and $1.80\,\mathrm{m}$. The uniform-prior Bayesian reference gives a mode of $(2.650,2.052)\,\mathrm{m}$ and joint region areas of $0.219$ and $0.809\,\mathrm{m^2}$ (ESS $2{,}893$). The two models share flight equations but use different launch distributions and density estimators. Their modes differ in height by about $0.26\,\mathrm{m}$.
+The quadratic baseline gives $T=0.405\,\mathrm{s}$ and $(Y,Z)=(2.495,1.920)\,\mathrm{m}$ (Appendix~\ref{app:noise}). At $\sigma=5\,\mathrm{mm}$, the calibrated full-mixture MDN (seed 11) gives a mode of $(2.666,1.792)\,\mathrm{m}$ and a mean of $(2.711,1.859)\,\mathrm{m}$. The mode heights for seeds 42 and 155 are approximately $1.83$ and $1.80\,\mathrm{m}$. The uniform-prior Bayesian reference gives a mode of $(2.650,2.052)\,\mathrm{m}$ and joint region areas of $0.219$ and $0.809\,\mathrm{m^2}$ (ESS $2{,}893$). The two models share flight equations but use different launch distributions and density estimators. Their modes differ in height by about $0.26\,\mathrm{m}$. The earlier uniform-trained P1 model gave a height of $2.15\,\mathrm{m}$ for this input. The comparison changes both the launch distribution and the network, so it does not isolate the effect of either.
 
 \begin{figure}[htbp]
   \centering
@@ -305,7 +305,7 @@ At $5\,\mathrm{mm}$, the $Z$ marginal and the vertical slices at $Y=2.62$ and $2
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=0.90\linewidth]{case_profiles_v3.png}
-  \caption{Seed-11 vertical slices and marginals. The white curve is the total MDN density and dashed curves show its five weighted Gaussian components. Green shows the weighted physics KDE at $5\,\mathrm{mm}$ with Scott's bandwidth. The fixed-$Y$ slices are normalised to integrate to one over height.}
+  \caption{Seed-11 vertical slices and marginals. The dark solid curve is the total MDN density and dashed curves show its five weighted Gaussian components. Green shows the weighted physics KDE at $5\,\mathrm{mm}$ with Scott's bandwidth. The fixed-$Y$ slices are normalised to integrate to one over height.}
   \label{fig:profiles}
 \end{figure}
 
@@ -408,7 +408,7 @@ Conditional in-frame expected calibration errors are $0.0032$, $0.0039$, $0.0044
 
 We draw 32 trajectories from the v3 test split (seed 155108) and use the same $5\,\mathrm{mm}$ perturbation for each method. Adaptive importance sampling starts with $6{,}000$ proposals per stage and retries with $18{,}000$ when conditional ESS falls below 100. After retry, 30 trajectories meet the ESS threshold and have a finite quadratic prediction. The median Euclidean errors are $0.478\,\mathrm{m}$ for quadratic extrapolation, $0.314\,\mathrm{m}$ for the Bayesian reference and $0.270\,\mathrm{m}$ for the calibrated v3 model (seed 11).
 
-Median energy scores are $0.241$ and $0.173$ for the Bayesian reference and v3 model, respectively. The energy score is $\mathbb E\|\mathbf Q-\mathbf q\|-\tfrac12\mathbb E\|\mathbf Q-\mathbf Q'\|$, with independent predictive draws $\mathbf Q,\mathbf Q'$ and truth $\mathbf q$ \cite{gneiting2007}. Median CPU times are $2.19\,\mathrm{s}$ and $1.74\,\mathrm{ms}$, including inference, sampling or resampling $4{,}096$ endpoints, and scoring. The small ESS-filtered subset and the different prior distributions limit the accuracy comparison.
+Median energy scores are $0.241$ and $0.173$ for the Bayesian reference and v3 model, respectively. The energy score is $\mathbb E\|\mathbf Q-\mathbf q\|-\tfrac12\mathbb E\|\mathbf Q-\mathbf Q'\|$, with independent predictive draws $\mathbf Q,\mathbf Q'$ and truth $\mathbf q$ \cite{gneiting2007}. Median elapsed times on the same CPU are $2.19\,\mathrm{s}$ and $1.74\,\mathrm{ms}$, including inference, sampling or resampling $4{,}096$ endpoints, and scoring. The small ESS-filtered subset and the different prior distributions limit the accuracy comparison.
 
 \subsection{Aimed Sampling and Asai Source Holdout}
 \label{sec:asai}
@@ -446,7 +446,7 @@ We take $6{,}000$ v3 test launches (seed 155107), retain paired airborne crossin
 
 For low shots, we continue the flight when the ball centre reaches $z=R$. The vertical velocity reverses with normal restitution $e_n=0.60$. At impact, the horizontal slip is $\mathbf v_t+(\boldsymbol\omega\times(-R\hat{\mathbf z}))_t$. With thin-shell inertia $I=2mR^2/3$, the tangential impulse opposes slip and is capped at $\mu_c$ times the normal impulse ($\mu_c=0.40$). The impulse changes both horizontal velocity and spin. When the incoming normal speed drops below $0.50\,\mathrm{m\,s^{-1}}$, the ball rolls with resistance $\mu_r g$ ($\mu_r=0.08$) and quadratic drag. We extend the integration horizon to $3\,\mathrm{s}$. These coefficients define the simulated surface.
 
-We use a separate $100{,}000$-launch v3 bank with the full anchor mixture. The simulator preserves the $88{,}999$ direct crossings and recovers $11{,}001$ additional crossings ($6{,}636$ during a rebound and $4{,}365$ while rolling). Of the post-contact crossings, $7{,}761$ are in-frame under the radius-inset criterion. The contact simulator supplies positions after impact if an observation occurs after the first contact. Varying $e_n$ over $0.56$--$0.67$, $\mu_c$ over $0.25$--$0.55$ and $\mu_r$ over $0.046$--$0.153$ one at a time leaves $11{,}001$ post-contact crossings in each simulated scenario. The in-frame count ranges from $7{,}742$ to $7{,}761$.
+We use a separate $100{,}000$-launch v3 bank with the full anchor mixture. The simulator preserves the $88{,}999$ direct crossings and recovers $11{,}001$ additional crossings ($6{,}636$ during a rebound and $4{,}365$ while rolling). Of the post-contact crossings, $7{,}761$ are in-frame under the radius-inset criterion. The contact simulator supplies missing positions after impact, completing the 951 observation prefixes left incomplete by the airborne integrator. Varying $e_n$ over $0.56$--$0.67$, $\mu_c$ over $0.25$--$0.55$ and $\mu_r$ over $0.046$--$0.153$ one at a time leaves $11{,}001$ post-contact crossings in each simulated scenario. The in-frame count ranges from $7{,}742$ to $7{,}761$.
 
 Two Wiener residual MDNs have the same architecture as Section~\ref{sec:mdn}, seed 11 and 100 training epochs. The airborne-only model trains on $71{,}202$ direct crossings. The contact-inclusive model trains on the same rows plus $8{,}798$ post-contact crossings. Each model uses its own selection and calibration folds from the same partition. Both are evaluated on the same $10{,}000$ rows with identical noise and receive only the two positions and $\sigma$ through the feature extractor. Ground-contact status defines evaluation subsets. The contact-inclusive model estimates the endpoint density conditional on crossing by either route.
 
@@ -542,7 +542,7 @@ Of 60 DFL flight candidates, 11 passed motion and event screening. At both $15$ 
 
 Two noisy positions constrain average velocity more tightly than acceleration. The Wiener anchor shrinks the quadratic estimate more strongly as $\sigma$ increases. The mixture then learns how to correct that anchor under the training distribution. The wind and spin-decay tests show that nominal HDR coverage depends on how closely the flight dynamics match that distribution.
 
-The aimed prior gives better representation of fast in-frame trajectories. Its small shared-test gain and the three Asai replays put the coverage gain in perspective. The replay results depend on the assumed noise and the fixed observation schedule. The DFL and ISSIA checks address individual physical trajectories, and calibration for real penalties remains unmeasured.
+Aiming increases sampling density in the high-speed target grid. The shared uniform-prior test shows a small decrease in median point error and a small increase in NLL. The three source-held-out Asai replays use reduced mixtures and an assumed measurement noise. The DFL and ISSIA checks address individual physical trajectories, including trajectories used to construct the full-mixture prior. Calibration for real penalties remains unmeasured. The earlier P1 results use a uniform test distribution and a ball-centre goal rectangle. Comparison with v3 calls for shared test flights, noise and goal geometry.
 
 The airborne model forecasts geometric in-frame arrival conditional on $E$. The contact-inclusive model conditions on crossing by either route within the simulated horizon. An unconditional in-frame forecast requires a separate estimate of crossing probability. The geometry accounts for ball radius and omits frame contact and goalkeeper intervention. The post-contact comparison depends on the assumed surface parameters and simulated mix of rebounds and rolls.
 
@@ -550,7 +550,7 @@ In a local calculation on held-out v3 launches, an additional $0.15\,\mathrm{s}$
 
 \section{Conclusion and Outlook}
 
-At an assumed $5\,\mathrm{mm}$ coordinate noise, the million-trajectory MDN predicts a most likely crossing at $(2.67,1.79)\,\mathrm{m}$ for the contest kick. Its $95\%$ region covers $95.1\%$ of the held-out still-air simulations at this noise level. Crosswind reduces coverage under the fixed model. Including post-contact trajectories substantially improves simulated rebound and rolling forecasts, with a $1\,\mathrm{mm}$ median difference on direct crossings in the paired experiment. High-rate tracking with independently measured noise and a real holdout spanning direct crossings, misses and ground contact would test these findings.
+At an assumed $5\,\mathrm{mm}$ coordinate noise, the million-trajectory MDN predicts a most likely crossing at $(2.67,1.79)\,\mathrm{m}$ for the contest kick. Its $95\%$ region covers $95.1\%$ of the held-out still-air simulations at this noise level. Crosswind reduces coverage under the fixed model. In the single-seed paired experiment on the specified simulated surface, contact-inclusive training reduces the post-contact median error from $0.242$ to $0.163\,\mathrm{m}$, with a $1\,\mathrm{mm}$ median difference on direct crossings. The post-contact inner region covers $58.9\%$ and $22.0\%$ of its predictive draws fall below the physical height limit. High-rate tracking with independently measured noise and a real holdout spanning direct crossings, misses and ground contact would test these findings.
 
 % References are numbered in the order you put them here. Every item should
 % correspond to an actual source and be cited in the text with \cite{key}.
@@ -676,12 +676,13 @@ Each prior variance is $(\theta_{\max}-\theta_{\min})^2/12$. We estimate each fl
 
 
 
+\clearpage
 \section{Case Decomposition Details}
 \label{app:decomp}
 
 We refine joint maxima from a $1201\times1201$ grid, retaining those above $0.2\%$ of the global peak. Slice and marginal peaks require a prominence of at least $0.2\%$ of their profile maximum. Reported peaks are at least $0.05\,\mathrm{m}$ apart.
 
-\begin{table}[htbp]
+\begin{table}[H]
   \centering
   \small
   \caption{Joint maxima counts and vertical slice and marginal peak heights (m).}

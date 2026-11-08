@@ -22,7 +22,7 @@ HERE = Path(__file__).resolve().parent          # code/analysis
 ROOT = HERE.parents[1]                          # repository root
 MODEL = ROOT / "code" / "model"
 DATA = ROOT / "data" / "datasets" / "v3_all"
-PAPER = ROOT / "paper"
+PAPER = ROOT / "paper" / "figures"
 OUT = ROOT / "experiments" / "diagnostics"
 sys.path[:0] = [str(MODEL)]
 
@@ -36,15 +36,15 @@ SEEDS = (11, 42, 155)
 NOISE_MM = (2, 5, 10, 15)
 FRAME = (-3.55, 3.55, .11, 2.33)
 FIXED_Y = (2.62, 2.67)
-DARK = "#09080e"
-TEXT = "#f5f3f7"
-CYAN = "#41f5f2"
-GREEN = "#94e76a"
-COLORS = ("#ffbc78", CYAN, "#eb8df9", GREEN, "#9faaff")
+PAPER_BG = "white"
+TEXT = "#191919"
+CYAN = "#00d9e2"
+GREEN = "#2ca02c"
+COLORS = ("#1f77b4", "#ff7f0e", GREEN, "#9467bd", "#8c564b")
 
 
 def load_model(seed):
-    run = DATA / f"seed_{seed}"
+    run = ROOT / "experiments" / "main_v3_all" / f"seed_{seed}"
     cfg = json.loads((run / "config.json").read_text())
     checkpoint = run / "model.pt"
     if hashlib.sha256(checkpoint.read_bytes()).hexdigest() != cfg["checkpoint_sha256"]:
@@ -175,13 +175,13 @@ def trajectories(theta, density):
 
 
 def save_figure(fig, name):
-    fig.savefig(PAPER / name, dpi=280, facecolor=DARK)
+    fig.savefig(PAPER / name, dpi=280, facecolor=PAPER_BG)
     plt.close(fig)
 
 
-def dark_style():
-    plt.rcParams.update({"figure.facecolor": DARK, "axes.facecolor": DARK, "savefig.facecolor": DARK,
-                         "text.color": TEXT, "axes.labelcolor": TEXT, "axes.edgecolor": "#85828c",
+def paper_style():
+    plt.rcParams.update({"figure.facecolor": PAPER_BG, "axes.facecolor": PAPER_BG, "savefig.facecolor": PAPER_BG,
+                         "text.color": TEXT, "axes.labelcolor": TEXT, "axes.edgecolor": TEXT,
                          "xtick.color": TEXT, "ytick.color": TEXT, "font.size": 10,
                          "axes.titlesize": 10.5, "legend.fontsize": 8.5})
 
@@ -197,7 +197,7 @@ def density_panel(ax, grid, *, heatmap=True):
         ax.pcolormesh(y[::3], z[::3], pdf[::3, ::3], cmap="magma", shading="auto",
                       norm=matplotlib.colors.PowerNorm(.6, vmin=0, vmax=pdf.max()), rasterized=True)
         ax.plot(*peaks[0], marker="+", color="white", ms=8, mew=1.4)
-    ax.contour(y[::2], z[::2], pdf[::2, ::2], thresholds[::-1], colors=[CYAN, "white"], linewidths=[1, 1.15])
+    ax.contour(y[::2], z[::2], pdf[::2, ::2], thresholds[::-1], colors=[CYAN if heatmap else "#008991", "white" if heatmap else "#565656"], linewidths=[1, 1.15])
     frame(ax)
 
 
@@ -219,7 +219,7 @@ def case_figures(grids, densities, z, physics, cloud, paths):
     for i, draw in enumerate(paths):
         label, endpoint, path = draw["label"], draw["yz"], draw["path"]
         color = COLORS[i]
-        ax.scatter(*endpoint, color=color, edgecolor=DARK, s=32, zorder=5)
+        ax.scatter(*endpoint, color=color, edgecolor="white", s=32, zorder=5)
         ax.annotate(label, endpoint, xytext=(7, 3), textcoords="offset points", color=color,
                     fontweight="bold", zorder=6)
         for axis, k in zip(axes[1], (2, 1)):
@@ -244,7 +244,7 @@ def case_figures(grids, densities, z, physics, cloud, paths):
                 components /= np.trapezoid(components.sum(0), z)
             for k, values in enumerate(components):
                 ax.plot(z, values, ls="--", lw=.85, color=COLORS[k], alpha=.8)
-            ax.plot(z, components.sum(0), lw=1.65, color="white", label="MDN total")
+            ax.plot(z, components.sum(0), lw=1.65, color=TEXT, label="MDN total")
             if mm == 5:
                 key = str(fixed_y) if fixed_y is not None else "marginal"
                 ax.plot(z, physics[key], lw=1.3, color=GREEN, label="Physics KDE")
@@ -260,7 +260,7 @@ def case_figures(grids, densities, z, physics, cloud, paths):
 def calibration_figure():
     records = []
     for seed in SEEDS:
-        with (DATA / f"seed_{seed}/test_scores.csv").open(newline="") as file:
+        with (ROOT / "experiments" / "main_v3_all" / f"seed_{seed}/test_scores.csv").open(newline="") as file:
             records.extend(csv.DictReader(file))
     rows = []
     for mm in NOISE_MM:
@@ -272,7 +272,7 @@ def calibration_figure():
                                                     for key in keys}))
     fig, axes = plt.subplots(1, 2, figsize=(9, 3.15), layout="constrained")
     for ax, nominal in zip(axes, (50, 95)):
-        ax.axhline(nominal, color="#a8a6b4", ls=":", lw=1.1, label="Nominal")
+        ax.axhline(nominal, color="#666666", ls=":", lw=1.1, label="Nominal")
         for stage, title, color, marker, line in zip(("raw", "scaled", "scaled_hdr"),
             ("Raw", "Scale only", "Scale + HDR"), COLORS, ("o", "s", "D"), ("-", "--", "-.")):
             group = [row for row in rows if row["stage"] == stage]
@@ -287,7 +287,7 @@ def calibration_figure():
 
 
 def case_diagnostics():
-    dark_style()
+    paper_style()
     z = np.linspace(.15, 3.8, 2801)
     report = {"mdn": {}}
     figures = {}
@@ -377,7 +377,7 @@ def paired_comparison():
 
 
 def screen_diagnostics():
-    dark_style()
+    paper_style()
     screen = json.loads((OUT / "screen.json").read_text())
     models, protocol = screen["models"], screen["protocol"]
     chosen_depth = screen["depth_at_activation_screen"]
@@ -397,7 +397,7 @@ def screen_diagnostics():
     for ax, (names, labels, title) in zip(axes, panels):
         x = np.arange(len(names))
         ax.errorbar(x, [nll[name]["mean"] for name in names],
-                    yerr=[nll[name]["sd"] for name in names], capsize=4, fmt="o", color=CYAN)
+                    yerr=[nll[name]["sd"] for name in names], capsize=4, fmt="o", color=COLORS[0])
         ax.set(xticks=x, xticklabels=labels, title=title, ylabel="Selection NLL (lower is better)")
         ax.grid(alpha=.17, axis="y")
     save_figure(fig, "architecture_v3.png")
@@ -432,7 +432,7 @@ def verify_calibration():
     for seed in SEEDS:
         model, stats, cal = load_model(seed)
         model.to(device)
-        with (DATA / f"seed_{seed}/test_scores.csv").open(newline="") as file:
+        with (ROOT / "experiments" / "main_v3_all" / f"seed_{seed}/test_scores.csv").open(newline="") as file:
             reference = {(int(float(row["sigma_mm"])), row["calibration"]): row
                          for row in csv.DictReader(file)}
         for mm in NOISE_MM:

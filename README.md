@@ -69,8 +69,8 @@ docs/
 ```powershell
 git clone https://github.com/x1shang/MDN-soccer-prediction
 cd MDN-soccer-prediction
-powershell -ExecutionPolicy Bypass -File code\scripts\fetch_data.ps1   # ~445 MB, verifies SHA-256
-python -m unittest discover -s code\model\tests -v                     # 14 unit tests
+powershell -ExecutionPolicy Bypass -File code\scripts\fetch_data.ps1   # ~465 MB, verifies SHA-256
+cd code\model; python -m unittest discover -s tests -v; cd ..\..        # 14 unit tests
 ```
 
 Train the main model (needs a CUDA GPU for the timings reported in the paper; CPU works, slower):
