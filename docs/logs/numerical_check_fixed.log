@@ -1,0 +1,1 @@
+Analytic NLL and captured AdamW match the distribution and eager reference, including partial batches and changing learning rates.

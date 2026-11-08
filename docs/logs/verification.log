@@ -1,0 +1,8 @@
+v2_no_asai {'train': 818534, 'selection': 51161, 'calibration': 51157, 'test': 102314} {'crossing_rate': 0.8352375510204082, 'crossing_pass': False, 'near_case_10cm': 1501, 'near_case_pass': True, 'near_case_5cm': 141} 483698 20207
+v3_all {'train': 872841, 'selection': 54553, 'calibration': 54550, 'test': 109108} {'crossing_rate': 0.890654693877551, 'crossing_pass': True, 'near_case_10cm': 1761, 'near_case_pass': True, 'near_case_5cm': 195} 518976 23324
+v3_no_asai {'train': 856879, 'selection': 53556, 'calibration': 53553, 'test': 107112} {'crossing_rate': 0.8743673469387755, 'crossing_pass': True, 'near_case_10cm': 1852, 'near_case_pass': True, 'near_case_5cm': 203} 550313 24984
+Shared canonical train 425010
+Shared canonical selection 26563
+Shared canonical calibration 26563
+Shared canonical test 53126
+All dataset and workbook hashes and paired canonical test labels verified.

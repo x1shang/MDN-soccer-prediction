@@ -1,0 +1,87 @@
+{
+  "n": 50000,
+  "seed": 42,
+  "config": {
+    "mass": 0.43,
+    "radius": 0.11,
+    "density": 1.2,
+    "gravity": 9.81,
+    "goal": 11.0,
+    "dt": 0.002,
+    "horizon": 1.5,
+    "wind_y": 0.0,
+    "spin_decay": null,
+    "lift_scale": 1.0,
+    "fixed_cd": null
+  },
+  "prior_low": [
+    18.0,
+    -12.0,
+    0.5,
+    -60.0,
+    -60.0,
+    -60.0,
+    0.15
+  ],
+  "prior_high": [
+    35.0,
+    12.0,
+    12.0,
+    60.0,
+    60.0,
+    60.0,
+    0.3
+  ],
+  "status_counts": {
+    "0": 0,
+    "1": 41733,
+    "2": 8267
+  },
+  "lift_law": "CL=min(1.4*R*omega_transverse/U, 0.30)",
+  "nominal_cd": 0.22,
+  "disclaimer": "Literature-informed sensitivity prior; no real-trajectory calibration or validation. MDN is conditional on airborne crossing, not all kicks.",
+  "parameter_order": [
+    "vx_m_s",
+    "vy_m_s",
+    "vz_m_s",
+    "wx_rad_s",
+    "wy_rad_s",
+    "wz_rad_s",
+    "Cd"
+  ],
+  "prior_distribution": "independent uniform component bounds",
+  "noise_sd_m": [
+    0.002,
+    0.005,
+    0.015
+  ],
+  "mdn_components": 3,
+  "split_fractions": [
+    0.8,
+    0.1,
+    0.1
+  ],
+  "train_status_counts": {
+    "timeout": 0,
+    "airborne": 33367,
+    "ground_hit": 6633
+  },
+  "status_code": {
+    "timeout": 0,
+    "airborne": 1,
+    "ground_hit": 2
+  },
+  "area_m2": 0.0380132711084365,
+  "goal_open_rectangle_m": {
+    "y": [
+      -3.66,
+      3.66
+    ],
+    "z": [
+      0,
+      2.44
+    ]
+  },
+  "fixed_cd_case": 0.22,
+  "record": "Snapshot of completed run literature50k; null spin_decay means no decay."
+}

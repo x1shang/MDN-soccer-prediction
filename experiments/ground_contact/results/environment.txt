@@ -1,0 +1,11 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "torch": "2.11.0+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn": 91900,
+  "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+  "gpu_mem_gb": 16.0,
+  "numpy": "2.5.4",
+  "scipy": "1.18.1"
+}

@@ -1,0 +1,19 @@
+[1/4] Training Wiener-ResMDN on cuda, seed 11
+  Epoch 001/100 | Train NLL: 0.2958 | Sel Val NLL: -0.0932 (Best: -0.0932 @ Ep 1)
+  Epoch 010/100 | Train NLL: 0.0435 | Sel Val NLL: -0.1960 (Best: -0.1960 @ Ep 10)
+  Epoch 020/100 | Train NLL: 0.0282 | Sel Val NLL: -0.2071 (Best: -0.2088 @ Ep 18)
+  Epoch 030/100 | Train NLL: 0.0175 | Sel Val NLL: -0.2226 (Best: -0.2259 @ Ep 28)
+  Epoch 040/100 | Train NLL: 0.0114 | Sel Val NLL: -0.2488 (Best: -0.2488 @ Ep 40)
+  Epoch 050/100 | Train NLL: 0.0052 | Sel Val NLL: -0.2539 (Best: -0.2583 @ Ep 48)
+  Epoch 060/100 | Train NLL: -0.0030 | Sel Val NLL: -0.2642 (Best: -0.2664 @ Ep 59)
+  Epoch 070/100 | Train NLL: -0.0070 | Sel Val NLL: -0.2771 (Best: -0.2771 @ Ep 70)
+  Epoch 080/100 | Train NLL: -0.0119 | Sel Val NLL: -0.2834 (Best: -0.2838 @ Ep 78)
+  Epoch 090/100 | Train NLL: -0.0134 | Sel Val NLL: -0.2889 (Best: -0.2889 @ Ep 89)
+  Epoch 100/100 | Train NLL: -0.0170 | Sel Val NLL: -0.2917 (Best: -0.2917 @ Ep 100)
+[2/4] Calibrating scale_sd and HDR quantiles on independent calibration split...
+  [Test ��= 2mm] Median Err: 0.1258m | NLL: -1.7541 | Cov50/95: 50.2% / 95.3%
+  [Test ��= 5mm] Median Err: 0.2656m | NLL: -0.3701 | Cov50/95: 50.4% / 95.1%
+  [Test ��=10mm] Median Err: 0.4164m | NLL: 0.3314 | Cov50/95: 50.9% / 95.0%
+  [Test ��=15mm] Median Err: 0.4885m | NLL: 0.5942 | Cov50/95: 50.5% / 95.4%
+[3/4] Generating competition Case Study predictions...
+[4/4] All artifacts (model.pt, config.json, curve.csv, test_scores.csv, case_predictions.json) saved successfully!

@@ -1,0 +1,14 @@
+case_id,source_sample_id,t_s,x_m,y_m,z_m,observation_type
+J03WOH,128955,0.0,0.0,0.0,0.24,provider_camera_tracking
+J03WOH,128956,0.04,1.22,0.26,0.46,provider_camera_tracking
+J03WOH,128957,0.08,2.41,0.54,0.65,provider_camera_tracking
+J03WR9,176244,0.0,0.0,0.0,0.23,provider_camera_tracking
+J03WR9,176245,0.04,1.1,0.36,0.34,provider_camera_tracking
+J03WR9,176246,0.08,2.17,0.71,0.41,provider_camera_tracking
+ISSIA_2972_2991,2972,0.0,-16.314884,-3.41513,3.312278,multiview_triangulation_from_2d_annotations
+ISSIA_2972_2991,2973,0.04,-16.106792,-2.876812,3.476694,multiview_triangulation_from_2d_annotations
+ISSIA_2972_2991,2974,0.08,-15.878806,-2.431243,3.624133,multiview_triangulation_from_2d_annotations
+Barber2010_Fig5,fig5_0.02s,0.0,0.0,,1.033333,digitized_measured_diamond
+Barber2010_Fig5,fig5_0.04s,0.02,0.466667,,1.233333,digitized_measured_diamond
+Barber2010_Fig5,fig5_0.06s,0.04,0.866667,,1.366667,digitized_measured_diamond
+

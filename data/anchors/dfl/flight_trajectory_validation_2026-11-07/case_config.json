@@ -1,0 +1,42 @@
+{
+  "J03WOH": {
+    "penalty": true,
+    "score_axes": [
+      "x",
+      "y",
+      "z"
+    ],
+    "target_local_x_m": 10.23,
+    "target_local_center_y_m": -0.08
+  },
+  "J03WR9": {
+    "penalty": true,
+    "score_axes": [
+      "x",
+      "y",
+      "z"
+    ],
+    "target_local_x_m": 9.53,
+    "target_local_center_y_m": -0.49
+  },
+  "ISSIA_2972_2991": {
+    "penalty": false,
+    "score_axes": [
+      "x",
+      "y",
+      "z"
+    ],
+    "target_local_x_m": null,
+    "target_local_center_y_m": null
+  },
+  "Barber2010_Fig5": {
+    "penalty": false,
+    "score_axes": [
+      "x",
+      "z"
+    ],
+    "target_local_x_m": null,
+    "target_local_center_y_m": null
+  }
+}
+

@@ -1,0 +1,604 @@
+{
+  "k_rhoA_2m": 0.05304177363967884,
+  "fps": 25.0,
+  "prefix_frames": 6,
+  "lift_model": "a = g - k CD |v| v + L * unit(z - v_hat (z . v_hat)); L in m/s^2",
+  "fit_scope": "initial state + dynamics parameters fitted on the 6-frame prefix only; later frames held out",
+  "interpretation_caveat": "Forecast-error reduction only means the vertical-force extension is worth considering. A near-zero CD-L correlation or a normal Jacobian condition number does not prove unique physical identification: the vertical force may absorb tracking/reconstruction or other model error. Do not use these fits as evidence that C_D(v) is necessary, and do not quote the fitted C_D as a calibration value.",
+  "arcs": [
+    {
+      "file": "seg_0608_0627.csv",
+      "models": {
+        "gravity": {
+          "arc": "seg_0608_0627.csv",
+          "last_frame": 622,
+          "model": "gravity",
+          "frames": 15,
+          "prefix_frames": [
+            608,
+            609,
+            610,
+            611,
+            612,
+            613
+          ],
+          "forecast_frames": [
+            614,
+            615,
+            616,
+            617,
+            618,
+            619,
+            620,
+            621,
+            622
+          ],
+          "prefix_rmse_m": 0.03991733390171798,
+          "forecast_rmse_m": 0.6966677579342985,
+          "final_error_m": 1.243064608892187,
+          "n_observations_prefix": 18,
+          "n_parameters": 6,
+          "dof": 12,
+          "jacobian_condition": 14.785578708238925,
+          "success": true,
+          "parameters": {
+            "x0_m": {
+              "value": -41.40725211061957,
+              "std": 0.020428347173116118
+            },
+            "y0_m": {
+              "value": -14.406790596042093,
+              "std": 0.02042834295082325
+            },
+            "z0_m": {
+              "value": 0.5016443721601216,
+              "std": 0.02042834722579747
+            },
+            "vx0_m_s": {
+              "value": 22.581946372009142,
+              "std": 0.16868151737139014
+            },
+            "vy0_m_s": {
+              "value": -0.6520976265543953,
+              "std": 0.16868156888358646
+            },
+            "vz0_m_s": {
+              "value": 8.273817129470512,
+              "std": 0.16868152769026573
+            }
+          },
+          "correlation": null
+        },
+        "drag": {
+          "arc": "seg_0608_0627.csv",
+          "last_frame": 622,
+          "model": "drag",
+          "frames": 15,
+          "prefix_frames": [
+            608,
+            609,
+            610,
+            611,
+            612,
+            613
+          ],
+          "forecast_frames": [
+            614,
+            615,
+            616,
+            617,
+            618,
+            619,
+            620,
+            621,
+            622
+          ],
+          "prefix_rmse_m": 0.033531992150319725,
+          "forecast_rmse_m": 0.4516265460446981,
+          "final_error_m": 0.7866522340605274,
+          "n_observations_prefix": 18,
+          "n_parameters": 7,
+          "dof": 11,
+          "jacobian_condition": 60.03570782449169,
+          "success": true,
+          "parameters": {
+            "x0_m": {
+              "value": -41.435227095137336,
+              "std": 0.02223806175348505
+            },
+            "y0_m": {
+              "value": -14.406515549689423,
+              "std": 0.018077533859536928
+            },
+            "z0_m": {
+              "value": 0.4926986930713646,
+              "std": 0.018569054470235317
+            },
+            "vx0_m_s": {
+              "value": 23.656353969918893,
+              "std": 0.5385180140317536
+            },
+            "vy0_m_s": {
+              "value": -0.6776101974717974,
+              "std": 0.15572340464861809
+            },
+            "vz0_m_s": {
+              "value": 8.635634941340989,
+              "std": 0.2337844337583552
+            },
+            "Cd": {
+              "value": 0.36317384811868314,
+              "std": 0.16936419386236137
+            }
+          },
+          "correlation": null
+        },
+        "drag+lift_perp": {
+          "arc": "seg_0608_0627.csv",
+          "last_frame": 622,
+          "model": "drag+lift_perp",
+          "frames": 15,
+          "prefix_frames": [
+            608,
+            609,
+            610,
+            611,
+            612,
+            613
+          ],
+          "forecast_frames": [
+            614,
+            615,
+            616,
+            617,
+            618,
+            619,
+            620,
+            621,
+            622
+          ],
+          "prefix_rmse_m": 0.031496639122134656,
+          "forecast_rmse_m": 0.18822267480747118,
+          "final_error_m": 0.30819936098204176,
+          "n_observations_prefix": 18,
+          "n_parameters": 8,
+          "dof": 10,
+          "jacobian_condition": 518.3103670632844,
+          "success": true,
+          "parameters": {
+            "x0_m": {
+              "value": -41.439937341629616,
+              "std": 0.022285086274775268
+            },
+            "y0_m": {
+              "value": -14.406472312783341,
+              "std": 0.017834550771886577
+            },
+            "z0_m": {
+              "value": 0.5071786175041437,
+              "std": 0.022177771900297093
+            },
+            "vx0_m_s": {
+              "value": 23.838858674409185,
+              "std": 0.5537455325331365
+            },
+            "vy0_m_s": {
+              "value": -0.681883794494684,
+              "std": 0.15464665129490432
+            },
+            "vz0_m_s": {
+              "value": 8.080954135788604,
+              "std": 0.5325081442977658
+            },
+            "Cd": {
+              "value": 0.3633388627151859,
+              "std": 0.16689618468679826
+            },
+            "L_m_s2": {
+              "value": 5.76116607331298,
+              "std": 4.989217178398491
+            }
+          },
+          "correlation": {
+            "CD_vs_L": 0.00020187683249757706
+          }
+        },
+        "drag+lift_horizontal": {
+          "arc": "seg_0608_0627.csv",
+          "last_frame": 622,
+          "model": "drag+lift_horizontal",
+          "frames": 15,
+          "prefix_frames": [
+            608,
+            609,
+            610,
+            611,
+            612,
+            613
+          ],
+          "forecast_frames": [
+            614,
+            615,
+            616,
+            617,
+            618,
+            619,
+            620,
+            621,
+            622
+          ],
+          "prefix_rmse_m": 0.028918727031314973,
+          "forecast_rmse_m": 0.43606271455384576,
+          "final_error_m": 0.7472171124581792,
+          "n_observations_prefix": 18,
+          "n_parameters": 8,
+          "dof": 10,
+          "jacobian_condition": 518.3728532053358,
+          "success": true,
+          "parameters": {
+            "x0_m": {
+              "value": -41.435403095933474,
+              "std": 0.020117151726136713
+            },
+            "y0_m": {
+              "value": -14.414421795814855,
+              "std": 0.020343451576866987
+            },
+            "z0_m": {
+              "value": 0.4927112881755341,
+              "std": 0.016795771292411672
+            },
+            "vx0_m_s": {
+              "value": 23.662098742220433,
+              "std": 0.4871993994778733
+            },
+            "vy0_m_s": {
+              "value": -0.3737968269995854,
+              "std": 0.48509047750736106
+            },
+            "vz0_m_s": {
+              "value": 8.635107139359675,
+              "std": 0.21144007435587928
+            },
+            "Cd": {
+              "value": 0.362651865474525,
+              "std": 0.15318332781604657
+            },
+            "L_m_s2": {
+              "value": -2.9999999999999996,
+              "std": 4.58130604723451
+            }
+          },
+          "correlation": {
+            "CD_vs_L": 0.0005535238722689326
+          }
+        }
+      }
+    },
+    {
+      "file": "seg_1144_1172.csv",
+      "models": {
+        "gravity": {
+          "arc": "seg_1144_1172.csv",
+          "last_frame": 1172,
+          "model": "gravity",
+          "frames": 29,
+          "prefix_frames": [
+            1144,
+            1145,
+            1146,
+            1147,
+            1148,
+            1149
+          ],
+          "forecast_frames": [
+            1150,
+            1151,
+            1152,
+            1153,
+            1154,
+            1155,
+            1156,
+            1157,
+            1158,
+            1159,
+            1160,
+            1161,
+            1162,
+            1163,
+            1164,
+            1165,
+            1166,
+            1167,
+            1168,
+            1169,
+            1170,
+            1171,
+            1172
+          ],
+          "prefix_rmse_m": 0.03229548354026358,
+          "forecast_rmse_m": 2.1794219140330022,
+          "final_error_m": 4.169411847874997,
+          "n_observations_prefix": 18,
+          "n_parameters": 6,
+          "dof": 12,
+          "jacobian_condition": 14.785568232415256,
+          "success": true,
+          "parameters": {
+            "x0_m": {
+              "value": -4.208861717989834,
+              "std": 0.016527740944363687
+            },
+            "y0_m": {
+              "value": 14.351955536466749,
+              "std": 0.01652774382424241
+            },
+            "z0_m": {
+              "value": 1.0981243975321002,
+              "std": 0.016527740583205292
+            },
+            "vx0_m_s": {
+              "value": 20.74406721851384,
+              "std": 0.13647334057661897
+            },
+            "vy0_m_s": {
+              "value": -0.9078632647630192,
+              "std": 0.13647330569569016
+            },
+            "vz0_m_s": {
+              "value": 7.460168944782545,
+              "std": 0.1364733264799385
+            }
+          },
+          "correlation": null
+        },
+        "drag": {
+          "arc": "seg_1144_1172.csv",
+          "last_frame": 1172,
+          "model": "drag",
+          "frames": 29,
+          "prefix_frames": [
+            1144,
+            1145,
+            1146,
+            1147,
+            1148,
+            1149
+          ],
+          "forecast_frames": [
+            1150,
+            1151,
+            1152,
+            1153,
+            1154,
+            1155,
+            1156,
+            1157,
+            1158,
+            1159,
+            1160,
+            1161,
+            1162,
+            1163,
+            1164,
+            1165,
+            1166,
+            1167,
+            1168,
+            1169,
+            1170,
+            1171,
+            1172
+          ],
+          "prefix_rmse_m": 0.02778369632503791,
+          "forecast_rmse_m": 1.488201978487545,
+          "final_error_m": 2.7612133352237387,
+          "n_observations_prefix": 18,
+          "n_parameters": 7,
+          "dof": 11,
+          "jacobian_condition": 60.01004410504557,
+          "success": true,
+          "parameters": {
+            "x0_m": {
+              "value": -4.230079676346624,
+              "std": 0.018417901981768382
+            },
+            "y0_m": {
+              "value": 14.352531370078351,
+              "std": 0.014961061407196824
+            },
+            "z0_m": {
+              "value": 1.0916101955479172,
+              "std": 0.015341092174336277
+            },
+            "vx0_m_s": {
+              "value": 21.555319158216548,
+              "std": 0.442584279740481
+            },
+            "vy0_m_s": {
+              "value": -0.9397391266991003,
+              "std": 0.12874394770049555
+            },
+            "vz0_m_s": {
+              "value": 7.725329975370988,
+              "std": 0.18922639555916257
+            },
+            "Cd": {
+              "value": 0.32755896161992093,
+              "std": 0.1671650766042033
+            }
+          },
+          "correlation": null
+        },
+        "drag+lift_perp": {
+          "arc": "seg_1144_1172.csv",
+          "last_frame": 1172,
+          "model": "drag+lift_perp",
+          "frames": 29,
+          "prefix_frames": [
+            1144,
+            1145,
+            1146,
+            1147,
+            1148,
+            1149
+          ],
+          "forecast_frames": [
+            1150,
+            1151,
+            1152,
+            1153,
+            1154,
+            1155,
+            1156,
+            1157,
+            1158,
+            1159,
+            1160,
+            1161,
+            1162,
+            1163,
+            1164,
+            1165,
+            1166,
+            1167,
+            1168,
+            1169,
+            1170,
+            1171,
+            1172
+          ],
+          "prefix_rmse_m": 0.02415546665188429,
+          "forecast_rmse_m": 1.0836200949011383,
+          "final_error_m": 2.1190915137468957,
+          "n_observations_prefix": 18,
+          "n_parameters": 8,
+          "dof": 10,
+          "jacobian_condition": 514.6349995769368,
+          "success": true,
+          "parameters": {
+            "x0_m": {
+              "value": -4.235535999287356,
+              "std": 0.017066682472061546
+            },
+            "y0_m": {
+              "value": 14.35267662923558,
+              "std": 0.013667071434704116
+            },
+            "z0_m": {
+              "value": 1.1090068278489345,
+              "std": 0.017001747415173404
+            },
+            "vx0_m_s": {
+              "value": 21.765388080860607,
+              "std": 0.4202750278452662
+            },
+            "vy0_m_s": {
+              "value": -0.947937982923269,
+              "std": 0.11862049602632536
+            },
+            "vz0_m_s": {
+              "value": 7.061285947021812,
+              "std": 0.4070421642592276
+            },
+            "Cd": {
+              "value": 0.3276941121487991,
+              "std": 0.1524805487186078
+            },
+            "L_m_s2": {
+              "value": 6.88856445651619,
+              "std": 3.8266480478736717
+            }
+          },
+          "correlation": {
+            "CD_vs_L": -4.471195205276704e-05
+          }
+        },
+        "drag+lift_horizontal": {
+          "arc": "seg_1144_1172.csv",
+          "last_frame": 1172,
+          "model": "drag+lift_horizontal",
+          "frames": 29,
+          "prefix_frames": [
+            1144,
+            1145,
+            1146,
+            1147,
+            1148,
+            1149
+          ],
+          "forecast_frames": [
+            1150,
+            1151,
+            1152,
+            1153,
+            1154,
+            1155,
+            1156,
+            1157,
+            1158,
+            1159,
+            1160,
+            1161,
+            1162,
+            1163,
+            1164,
+            1165,
+            1166,
+            1167,
+            1168,
+            1169,
+            1170,
+            1171,
+            1172
+          ],
+          "prefix_rmse_m": 0.023413639317549178,
+          "forecast_rmse_m": 1.166172193448615,
+          "final_error_m": 2.1407207779398485,
+          "n_observations_prefix": 18,
+          "n_parameters": 8,
+          "dof": 10,
+          "jacobian_condition": 514.6980578454321,
+          "success": true,
+          "parameters": {
+            "x0_m": {
+              "value": -4.23038614581676,
+              "std": 0.016283584458740737
+            },
+            "y0_m": {
+              "value": 14.344622668195829,
+              "std": 0.016464882501693444
+            },
+            "z0_m": {
+              "value": 1.0916181454493117,
+              "std": 0.013558974587832938
+            },
+            "vx0_m_s": {
+              "value": 21.56597739208235,
+              "std": 0.3914327615978179
+            },
+            "vy0_m_s": {
+              "value": -0.6368517481139652,
+              "std": 0.3916762198935766
+            },
+            "vz0_m_s": {
+              "value": 7.7249964476709305,
+              "std": 0.16723266358830552
+            },
+            "Cd": {
+              "value": 0.32714857253609697,
+              "std": 0.1477372415638927
+            },
+            "L_m_s2": {
+              "value": -2.9999999999999996,
+              "std": 3.7095144081671654
+            }
+          },
+          "correlation": {
+            "CD_vs_L": 0.0005203269864328214
+          }
+        }
+      }
+    }
+  ]
+}

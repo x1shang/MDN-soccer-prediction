@@ -1,0 +1,207 @@
+{
+  "J03WOH": {
+    "reference_time_s": 0.36431372549019614,
+    "reference_local_yz_m": [
+      2.8388235294117647,
+      1.178921568627451
+    ],
+    "goal_center_y_m": -0.08,
+    "models": {
+      "quadratic": {
+        "prefix_rmse_m": 0.0,
+        "eligible_frames": 7,
+        "scored_frames": 7,
+        "missing_frames": 0,
+        "post_goal_frames_excluded": 1,
+        "position_rmse_m": 0.19015031647922997,
+        "axis_rmse_m": [
+          0.12311434870537888,
+          0.14307840008691186,
+          0.02299068134204092
+        ],
+        "goal_reached": true,
+        "ground_time_s": 0.6480637389502201,
+        "common_frames": 7,
+        "common_rmse_m": 0.19015031647922997,
+        "goal_time_s": 0.3737522504111566,
+        "goal_local_yz_m": [
+          3.209018719366015,
+          1.126193739721139
+        ],
+        "goal_error_m": 0.3739314143080745,
+        "goal_time_error_s": 0.009438524920960478
+      },
+      "gravity": {
+        "prefix_rmse_m": 0.00914270934801169,
+        "eligible_frames": 7,
+        "scored_frames": 7,
+        "missing_frames": 0,
+        "post_goal_frames_excluded": 1,
+        "position_rmse_m": 0.5049524572597577,
+        "axis_rmse_m": [
+          0.4004773930355711,
+          0.20585863495002532,
+          0.2285105340604942
+        ],
+        "goal_reached": true,
+        "ground_time_s": 1.1483550292901885,
+        "common_frames": 7,
+        "common_rmse_m": 0.5049524572597577,
+        "goal_time_s": 0.3394190871680233,
+        "goal_local_yz_m": [
+          2.2877455057259257,
+          1.5500127921093392
+        ],
+        "goal_error_m": 0.6643761617749201,
+        "goal_time_error_s": -0.024894638322172813
+      },
+      "drag_022": {
+        "prefix_rmse_m": 0.006891685748106207,
+        "eligible_frames": 7,
+        "scored_frames": 7,
+        "missing_frames": 0,
+        "post_goal_frames_excluded": 1,
+        "position_rmse_m": 0.34883263073643345,
+        "axis_rmse_m": [
+          0.11483681935431497,
+          0.27008182843038453,
+          0.18855374602162023
+        ],
+        "goal_reached": true,
+        "ground_time_s": 1.0963396505445209,
+        "common_frames": 7,
+        "common_rmse_m": 0.34883263073643345,
+        "goal_time_s": 0.35612061662848227,
+        "goal_local_yz_m": [
+          2.287502028003999,
+          1.5166400063923093
+        ],
+        "goal_error_m": 0.6465362643509253,
+        "goal_time_error_s": -0.008193108861713871
+      },
+      "drag_045": {
+        "prefix_rmse_m": 0.007033572931712984,
+        "eligible_frames": 7,
+        "scored_frames": 7,
+        "missing_frames": 0,
+        "post_goal_frames_excluded": 1,
+        "position_rmse_m": 0.39252955739159356,
+        "axis_rmse_m": [
+          0.150434397459393,
+          0.32935170422800075,
+          0.15157968336548674
+        ],
+        "goal_reached": true,
+        "ground_time_s": 1.0525378055169268,
+        "common_frames": 7,
+        "common_rmse_m": 0.39252955739159356,
+        "goal_time_s": 0.37497089455810884,
+        "goal_local_yz_m": [
+          2.2872475864488817,
+          1.4774330541661342
+        ],
+        "goal_error_m": 0.6271723270791729,
+        "goal_time_error_s": 0.010657169067912697
+      }
+    }
+  },
+  "J03WR9": {
+    "reference_time_s": 0.3695454545454545,
+    "reference_local_yz_m": [
+      2.579659090909091,
+      0.4656818181818182
+    ],
+    "goal_center_y_m": -0.49,
+    "models": {
+      "quadratic": {
+        "prefix_rmse_m": 0.0,
+        "eligible_frames": 7,
+        "scored_frames": 5,
+        "missing_frames": 2,
+        "post_goal_frames_excluded": 1,
+        "position_rmse_m": 0.3169227035098733,
+        "axis_rmse_m": [
+          0.19162463307206856,
+          0.1292284798332085,
+          0.21684095554115276
+        ],
+        "goal_reached": false,
+        "ground_time_s": 0.2927882059609969,
+        "common_frames": 5,
+        "common_rmse_m": 0.3169227035098733
+      },
+      "gravity": {
+        "prefix_rmse_m": 0.009400604046785792,
+        "eligible_frames": 7,
+        "scored_frames": 7,
+        "missing_frames": 0,
+        "post_goal_frames_excluded": 1,
+        "position_rmse_m": 0.4504647011552932,
+        "axis_rmse_m": [
+          0.2291833331491389,
+          0.38427782225943286,
+          0.05219197364658864
+        ],
+        "goal_reached": true,
+        "ground_time_s": 0.5821584993080795,
+        "common_frames": 5,
+        "common_rmse_m": 0.2646555971769177,
+        "goal_time_s": 0.3511520737090372,
+        "goal_local_yz_m": [
+          3.11814132129157,
+          0.5571102492368524
+        ],
+        "goal_error_m": 0.546188859683969,
+        "goal_time_error_s": -0.018393380836417283
+      },
+      "drag_022": {
+        "prefix_rmse_m": 0.006673156483565423,
+        "eligible_frames": 7,
+        "scored_frames": 7,
+        "missing_frames": 0,
+        "post_goal_frames_excluded": 1,
+        "position_rmse_m": 0.3102837281016947,
+        "axis_rmse_m": [
+          0.02404761650493091,
+          0.3066429558172388,
+          0.0408387280995021
+        ],
+        "goal_reached": true,
+        "ground_time_s": 0.5748494614527563,
+        "common_frames": 5,
+        "common_rmse_m": 0.189837264072832,
+        "goal_time_s": 0.3676779896983776,
+        "goal_local_yz_m": [
+          3.11814291845853,
+          0.5229682365378912
+        ],
+        "goal_error_m": 0.5415224522218456,
+        "goal_time_error_s": -0.001867464847076894
+      },
+      "drag_045": {
+        "prefix_rmse_m": 0.00514946248655696,
+        "eligible_frames": 7,
+        "scored_frames": 7,
+        "missing_frames": 0,
+        "post_goal_frames_excluded": 1,
+        "position_rmse_m": 0.3310696499354888,
+        "axis_rmse_m": [
+          0.23189233039624102,
+          0.234333217551244,
+          0.030348037232893265
+        ],
+        "goal_reached": true,
+        "ground_time_s": 0.5676846512868541,
+        "common_frames": 5,
+        "common_rmse_m": 0.21515457050904122,
+        "goal_time_s": 0.3862679681870104,
+        "goal_local_yz_m": [
+          3.1181445814662023,
+          0.4830662137000068
+        ],
+        "goal_error_m": 0.5387660352584096,
+        "goal_time_error_s": 0.016722513641555914
+      }
+    }
+  }
+}

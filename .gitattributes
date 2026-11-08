@@ -1,4 +1,18 @@
-# Preserve exact file bytes on every platform so that SHA256SUMS stays valid
-# (Git for Windows sets core.autocrlf=true by default, which would otherwise
-# rewrite LF-only text files on checkout).
-* -text
+# Normalise text to LF in the repository so that recorded SHA-256 values for
+# source files stay reproducible on every platform (summarize.py re-hashes
+# train_wiener_mdn.py and compares it with each run's config.json).
+* text=auto eol=lf
+
+# Artefacts whose exact bytes are hashed by the data manifests: never touch them.
+*.csv   -text
+*.json  -text
+*.npz   -text
+*.xlsx  -text
+*.pt    -text
+*.pdf   -text
+*.zip   -text
+*.png   -text
+
+# Windows entry points.
+*.ps1 text eol=crlf
+*.bat text eol=crlf

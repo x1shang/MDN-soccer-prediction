@@ -1,0 +1,15 @@
+[1/4] Training Wiener-ResMDN on device: cuda
+  Epoch 001/100 | Train NLL: 0.6794 | Sel Val NLL: 0.4927 (Best: 0.4927 @ Ep 1)
+  Epoch 010/100 | Train NLL: 0.2053 | Sel Val NLL: 0.0156 (Best: -0.0047 @ Ep 9)
+  Epoch 020/100 | Train NLL: 0.1169 | Sel Val NLL: -0.0924 (Best: -0.0968 @ Ep 17)
+  Epoch 030/100 | Train NLL: 0.1002 | Sel Val NLL: -0.1193 (Best: -0.1255 @ Ep 25)
+  Epoch 040/100 | Train NLL: 0.0773 | Sel Val NLL: -0.1501 (Best: -0.1501 @ Ep 40)
+  Epoch 050/100 | Train NLL: 0.0657 | Sel Val NLL: -0.1582 (Best: -0.1660 @ Ep 49)
+  Epoch 060/100 | Train NLL: 0.0549 | Sel Val NLL: -0.1722 (Best: -0.1722 @ Ep 60)
+  Epoch 070/100 | Train NLL: 0.0382 | Sel Val NLL: -0.1800 (Best: -0.1861 @ Ep 68)
+  Epoch 080/100 | Train NLL: 0.0260 | Sel Val NLL: -0.1944 (Best: -0.1951 @ Ep 76)
+  Epoch 090/100 | Train NLL: 0.0154 | Sel Val NLL: -0.2019 (Best: -0.2019 @ Ep 90)
+  Epoch 100/100 | Train NLL: 0.0150 | Sel Val NLL: -0.2047 (Best: -0.2047 @ Ep 100)
+[2/4] Calibrating scale_sd and HDR quantiles on independent calibration split...
+[3/4] Generating competition Case Study predictions...
+[4/4] All artifacts (model.pt, config.json, curve.csv, test_scores.csv, case_predictions.json) saved successfully!

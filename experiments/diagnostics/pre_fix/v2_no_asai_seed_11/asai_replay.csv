@@ -1,0 +1,4 @@
+case,model,sigma_mm,error_cm,assessment
+Fig3,fresh_wiener_res_mdn,10,58.1590431836876,Source-held-out Asai benchmark
+Sample05,fresh_wiener_res_mdn,10,57.54093464924349,Source-held-out Asai benchmark
+Sample12,fresh_wiener_res_mdn,10,62.28955387697312,Source-held-out Asai benchmark

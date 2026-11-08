@@ -1,0 +1,6 @@
+Integrating 1,225,000 frozen v3 draws (8 workers)
+v3_all {'crossing_rate': 0.890654693877551, 'crossing_pass': True, 'near_case_10cm': 1761, 'near_case_pass': True, 'near_case_5cm': 195}
+Integrating 147,000 shared replacements
+v3_no_asai {'crossing_rate': 0.8743673469387755, 'crossing_pass': True, 'near_case_10cm': 1852, 'near_case_pass': True, 'near_case_5cm': 203}
+Integrating 334,888 matching draws with v2 aim
+v2_no_asai {'crossing_rate': 0.8352375510204082, 'crossing_pass': False, 'near_case_10cm': 1501, 'near_case_pass': True, 'near_case_5cm': 141}

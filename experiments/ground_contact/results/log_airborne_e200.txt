@@ -1,0 +1,25 @@
+[1/4] Training Wiener-ResMDN on device: cuda
+  Epoch 001/200 | Train NLL: 0.6794 | Sel Val NLL: 0.4927 (Best: 0.4927 @ Ep 1)
+  Epoch 010/200 | Train NLL: 0.1978 | Sel Val NLL: 0.0153 (Best: -0.0198 @ Ep 9)
+  Epoch 020/200 | Train NLL: 0.1148 | Sel Val NLL: -0.0831 (Best: -0.0967 @ Ep 17)
+  Epoch 030/200 | Train NLL: 0.1040 | Sel Val NLL: -0.1148 (Best: -0.1148 @ Ep 30)
+  Epoch 040/200 | Train NLL: 0.0848 | Sel Val NLL: -0.1328 (Best: -0.1345 @ Ep 39)
+  Epoch 050/200 | Train NLL: 0.0776 | Sel Val NLL: -0.1296 (Best: -0.1437 @ Ep 45)
+  Epoch 060/200 | Train NLL: 0.0716 | Sel Val NLL: -0.1511 (Best: -0.1511 @ Ep 60)
+  Epoch 070/200 | Train NLL: 0.0602 | Sel Val NLL: -0.1510 (Best: -0.1632 @ Ep 69)
+  Epoch 080/200 | Train NLL: 0.0503 | Sel Val NLL: -0.1602 (Best: -0.1645 @ Ep 79)
+  Epoch 090/200 | Train NLL: 0.0427 | Sel Val NLL: -0.1618 (Best: -0.1770 @ Ep 86)
+  Epoch 100/200 | Train NLL: 0.0400 | Sel Val NLL: -0.1788 (Best: -0.1788 @ Ep 100)
+  Epoch 110/200 | Train NLL: 0.0314 | Sel Val NLL: -0.1938 (Best: -0.1938 @ Ep 110)
+  Epoch 120/200 | Train NLL: 0.0275 | Sel Val NLL: -0.1949 (Best: -0.1949 @ Ep 120)
+  Epoch 130/200 | Train NLL: 0.0119 | Sel Val NLL: -0.2028 (Best: -0.2028 @ Ep 130)
+  Epoch 140/200 | Train NLL: 0.0127 | Sel Val NLL: -0.2065 (Best: -0.2065 @ Ep 140)
+  Epoch 150/200 | Train NLL: 0.0041 | Sel Val NLL: -0.2065 (Best: -0.2141 @ Ep 144)
+  Epoch 160/200 | Train NLL: 0.0093 | Sel Val NLL: -0.2135 (Best: -0.2158 @ Ep 158)
+  Epoch 170/200 | Train NLL: 0.0007 | Sel Val NLL: -0.2183 (Best: -0.2208 @ Ep 167)
+  Epoch 180/200 | Train NLL: 0.0018 | Sel Val NLL: -0.2198 (Best: -0.2229 @ Ep 177)
+  Epoch 190/200 | Train NLL: 0.0005 | Sel Val NLL: -0.2224 (Best: -0.2229 @ Ep 177)
+  Epoch 200/200 | Train NLL: -0.0112 | Sel Val NLL: -0.2235 (Best: -0.2236 @ Ep 197)
+[2/4] Calibrating scale_sd and HDR quantiles on independent calibration split...
+[3/4] Generating competition Case Study predictions...
+[4/4] All artifacts (model.pt, config.json, curve.csv, test_scores.csv, case_predictions.json) saved successfully!

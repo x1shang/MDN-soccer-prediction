@@ -1,0 +1,18 @@
+[
+  {
+    "match_id": "J03WMX",
+    "file": "DFL_03_02_events_raw_DFL-COM-000001_DFL-MAT-J03WMX.xml",
+    "sha256": "6f9741ea62e9dee35b604942e1dad2ac0a4dc3fce14ef2f3858aa12b74dafe00"
+  },
+  {
+    "match_id": "J03WOH",
+    "file": "DFL_03_02_events_raw_DFL-COM-000002_DFL-MAT-J03WOH.xml",
+    "sha256": "abc27e3268e6126fb3e6e90bff5cca8d4586a5e0cefe9bd59bf32871e89d8544"
+  },
+  {
+    "match_id": "J03WR9",
+    "file": "DFL_03_02_events_raw_DFL-COM-000002_DFL-MAT-J03WR9.xml",
+    "sha256": "31735a2d7b9008c44cae9b6ac43ab38ddeaa435d0416265ec0ebfebf53b3c982"
+  }
+]
+

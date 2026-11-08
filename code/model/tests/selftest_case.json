@@ -1,0 +1,64 @@
+{
+  "input": {
+    "r0": [0.0, 0.0, 0.11],
+    "r_0.05": [1.5, 0.45, 0.44],
+    "r_0.10": [2.96, 0.86, 0.74],
+    "dt_s": 0.05
+  },
+  "kinematics": {
+    "v_at_0.05_m_s": [29.6, 8.6, 6.3],
+    "speed_m_s": 31.4612,
+    "speed_km_h": 113.26,
+    "a_bar_m_s2": [-16.0, -16.0, -12.0],
+    "a_aero_m_s2": [-16.0, -16.0, -2.19],
+    "a_parallel_m_s2": -19.8656,
+    "a_perp_m_s2": [2.6904, -10.5697, 1.788],
+    "a_perp_norm_m_s2": 11.0523,
+    "v0_m_s": [30.4, 9.4, 6.9]
+  },
+  "derived": {
+    "A_m2": 0.038013,
+    "spin_axis_unit": [0.2357, -0.1035, -0.9663],
+    "spin_axis_note": "w_hat=(v_hat x a_perp)/|v_hat x a_perp|, convention a_perp=k*CL*|v|^2*(w_hat x v_hat). Flip sign if your code uses (v_hat x w_hat)."
+  },
+  "inverted_coefficients_by_density": {
+    "rho_1.2": {"k_rhoA_2m": 0.053042, "Cd_hat": 0.3784, "CL_hat": 0.2105},
+    "rho_1.225": {"k_rhoA_2m": 0.054147, "Cd_hat": 0.3707, "CL_hat": 0.2062}
+  },
+  "density_note": "Team decision 2026-11-07: rho = 1.20 (B's params.json). Use Cd_hat = 0.3784, CL_hat = 0.2105 in the paper. rho = 1.225 values are legacy.",
+  "constant_accel_baseline": {
+    "poly": {"x": "30.4t - 8t^2", "y": "9.4t - 8t^2", "z": "0.11 + 6.9t - 6t^2"},
+    "T_s": 0.405,
+    "T_s_full_precision": 0.405008,
+    "Y_m": 2.495,
+    "Y_m_full_precision": 2.494824,
+    "Z_m": 1.92,
+    "Z_m_full_precision": 1.920367,
+    "rounding_note": "Paper reports 3 decimals: T = 0.405 s, (Y, Z) = (2.495, 1.920) m. Do NOT write 1.921."
+  },
+  "goal_geometry": {
+    "post_half_width_m": 3.66,
+    "crossbar_m": 2.44,
+    "baseline_distance_to_right_post_m": 1.165,
+    "baseline_distance_to_crossbar_m": 0.52
+  },
+  "noise_propagation": {
+    "law_r0_exact": "sd(a) = sqrt(5)*sigma/dt^2  (r(0) given exactly, r(0.05) and r(0.10) noisy)",
+    "law_r0_noisy": "sd(a) = sqrt(6)*sigma/dt^2  (conservative upper bound, all three points noisy)",
+    "naive_shortcut": "0.5*sd(a)*T^2 understates the true spread by about 11% because T itself becomes random",
+    "analytic": {
+      "2mm": {"sd_a_r0exact": 1.7889, "sd_a_r0noisy": 1.9596},
+      "5mm": {"sd_a_r0exact": 4.4721, "sd_a_r0noisy": 4.899},
+      "15mm": {"sd_a_r0exact": 13.4164, "sd_a_r0noisy": 14.6969}
+    },
+    "monte_carlo_150k": {
+      "note": "r0 exact; 2 observations iid Gaussian; T solved from x(T)=11 exactly",
+      "2mm_r0exact":   {"sd_T_ms": 7.05,  "sd_Y_cm": 16.2,  "sd_Z_cm": 16.2,  "Y95": [1.88, 2.52], "Z95": [1.38, 2.02]},
+      "2.887mm_r0exact": {"sd_T_ms": 10.34, "sd_Y_cm": 23.4, "sd_Z_cm": 23.4, "Y95": [1.74, 2.66], "Z95": [1.24, 2.16]},
+      "5mm_r0exact":   {"sd_T_ms": 18.40, "sd_Y_cm": 41.0,  "sd_Z_cm": 40.9,  "Y95": [1.40, 3.01], "Z95": [0.90, 2.51]},
+      "15mm_r0exact":  {"sd_T_ms": 56.03, "sd_Y_cm": 139.1, "sd_Z_cm": 139.6, "Y95": [-0.53, 5.00], "Z95": [-1.05, 4.51]},
+      "5mm_r0noisy":   {"sd_T_ms": 19.69, "sd_Y_cm": 44.1,  "sd_Z_cm": 43.8,  "Y95": [1.34, 3.07], "Z95": [0.84, 2.56]},
+      "15mm_r0noisy":  {"sd_T_ms": 57.67, "sd_Y_cm": 150.5, "sd_Z_cm": 151.0, "Y95": [-0.75, 5.23], "Z95": [-1.26, 4.72]}
+    }
+  }
+}

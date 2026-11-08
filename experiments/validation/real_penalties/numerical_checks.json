@@ -1,0 +1,13 @@
+{
+  "gravity_analytic_and_irregular_times": "passed",
+  "position_max_difference_m": {
+    "J03WOH/quadratic": 2.2325146823256292e-14,
+    "J03WOH/gravity": 5.624745295740461e-14,
+    "J03WOH/drag_022": 1.603186650650263e-14,
+    "J03WOH/drag_045": 5.929048329109094e-15,
+    "J03WR9/quadratic": 4.224527172319326e-15,
+    "J03WR9/gravity": 6.294729577403332e-14,
+    "J03WR9/drag_022": 5.65669253787293e-15,
+    "J03WR9/drag_045": 1.1031505816613848e-14
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_url": "https://github.com/mguti97/SoccerNet-v3D/releases/download/v1.0.0/ISSIA-3D.csv",
+  "source_rows": 2465,
+  "unique_frames": 2465,
+  "valid_3d_frames": 1689,
+  "fps": 25,
+  "continuity_runs": 79,
+  "runs_at_least_10_frames": 38,
+  "longest_contiguous_run_frames": 122,
+  "height_sign_conversion": "z_up_m = -z_original_m; SoccerNet pitch model places crossbar at z=-2.44 m.",
+  "coordinate_reference_url": "https://raw.githubusercontent.com/SoccerNet/sn-calibration/main/src/soccerpitch.py",
+  "height_range_m": [
+    -10.201957678672557,
+    7.124904765354933
+  ],
+  "negative_heights_preserved": 40,
+  "no_interpolation": true,
+  "no_clipping": true,
+  "warning": "Continuity runs are not independent kicks and may contain contacts, rolling, or reconstruction errors. Requires further flight segmentation and quality filtering.",
+  "ball_size_evidence": "Real adult soccer match context; no per-ball size/mass certificate in CSV.",
+  "source_sha256": "7f4b33068498d537186f6541a232c0959a23ed0af5bc3bd1ec924ffe8270ddc4"
+}

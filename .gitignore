@@ -1,4 +1,37 @@
+# ---- Python ----
 __pycache__/
 *.py[cod]
-.venv/
-outputs/
+*.egg-info/
+.pytest_cache/
+
+# ---- local Python environments (recreate from requirements) ----
+env/runtime/
+experiments/ground_contact/.venv/
+experiments/ground_contact/torchinductor_*/
+.uv-cache/
+
+# ---- large simulation datasets: published as GitHub Release assets ----
+# see data/README.md for the download commands and SHA-256 values
+data/datasets/*/data.npz
+experiments/ground_contact/data.npz
+experiments/ground_contact/bounce/data_bounce.npz
+_release_assets/
+
+# ---- LaTeX build by-products (the compiled paper/ is tracked) ----
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/ai-report.aux
+paper/ai-report.log
+paper/ai-report.out
+
+# ---- OS / editor noise ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

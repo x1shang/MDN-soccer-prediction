@@ -1,0 +1,28 @@
+{
+  "cases": [
+    "J03WOH",
+    "J03WR9"
+  ],
+  "models_fixed_cd": {
+    "quadratic": null,
+    "gravity": 0.0,
+    "drag_022": 0.22,
+    "drag_045": 0.45
+  },
+  "spin": "zero for physical baselines",
+  "fit": "three prefix frames; six initial-state coordinates; unweighted position least squares",
+  "quadratic": "exact interpolation of three prefix positions, constant acceleration thereafter",
+  "density_kg_m3": 1.2,
+  "mass_kg": 0.43,
+  "radius_m": 0.11,
+  "primary_score": "Euclidean position RMSE at held-out frames before observed goal-plane crossing",
+  "failure": "report predictions stopped by ground and absent forward goal crossings",
+  "goal_reference": "linear interpolation of the held-out tracking bracket",
+  "horizon_s": 1.5,
+  "selection": "report every fixed model; no held-out selection or calibration",
+  "source_sha256": {
+    "inputs_only.csv": "15c7d59a3b8136d0707bce570866827bbc5bec254f027ee651a3a56000891927",
+    "case_config.json": "3dd014e5aaf5a098b7d935f37c1db3ed25819d78c25c6fd2afa8e4c7241ccb55"
+  },
+  "script_sha256": "327a5fd25757bdb5256500bf1fbe797b51a4cbe36a3f2973ee7e515ea4796f19"
+}

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "<stdin>", line 25, in <module>
+  File "E:\SJTU2026\threebody\UPC155\asai\scale_1m\runtime\torch\testing\_comparison.py", line 1589, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 3.4903931617736816 but got 3.377758026123047.
+Absolute difference: 0.11263513565063477 (up to 2e-05 allowed)
+Relative difference: 0.03227004249383699 (up to 3e-05 allowed)

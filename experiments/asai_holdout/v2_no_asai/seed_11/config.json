@@ -1,0 +1,67 @@
+{
+  "dataset_sha256": "e9b2662f85010383538d2fe2b0148e898b6dbf433bdb315d6f2d107310b15a16",
+  "indices_sha256": "3b2a487938aab4b99db48ba979a0282a1ce6883c8cf3bd0ee0ae59c75ccd9c58",
+  "dataset_quality": {
+    "crossing_rate": 0.8352375510204082,
+    "crossing_pass": false,
+    "near_case_10cm": 1501,
+    "near_case_pass": true,
+    "near_case_5cm": 141
+  },
+  "device": "cuda",
+  "mc": 256,
+  "checkpoint_sha256": "feab8551f9d6c466cc0a17dd19ceed13ab92c7a3dabc6fe386ecfb353cac400f",
+  "architecture": {
+    "depth": 3,
+    "hidden_dim": 192,
+    "activation": "GELU",
+    "residual": true
+  },
+  "features": "phys_wiener_22d",
+  "k": 5,
+  "epochs": 100,
+  "seed": 11,
+  "normalization_and_selection_seed": 11,
+  "batch_size": 512,
+  "torch_version": "2.9.1+cu128",
+  "training_script_sha256": "23b28c00f79f5064f3e7f70cb880984f3167e5625b6afacaf8d61a55ea65fb7a",
+  "parameters": 85470,
+  "seconds": 110.88052180000523,
+  "sizes": {
+    "train": 818534,
+    "selection": 51161,
+    "calibration": 51157,
+    "test": 102314
+  },
+  "selected_epoch": 98,
+  "calibration": {
+    "2": {
+      "scale_sd": 0.9981159672698903,
+      "hdr_mass": {
+        "0.5": 0.5,
+        "0.95": 0.94921875
+      }
+    },
+    "5": {
+      "scale_sd": 0.9989255516116096,
+      "hdr_mass": {
+        "0.5": 0.5078125,
+        "0.95": 0.9453125
+      }
+    },
+    "10": {
+      "scale_sd": 1.003901407715376,
+      "hdr_mass": {
+        "0.5": 0.5078125,
+        "0.95": 0.9453125
+      }
+    },
+    "15": {
+      "scale_sd": 1.0023819501080926,
+      "hdr_mass": {
+        "0.5": 0.515625,
+        "0.95": 0.9453125
+      }
+    }
+  }
+}

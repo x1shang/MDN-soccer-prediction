@@ -1,0 +1,94 @@
+[
+  {
+    "prefix_frames": [
+      608,
+      609,
+      610,
+      611,
+      612,
+      613
+    ],
+    "forecast_frames": [
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622
+    ],
+    "models": {
+      "0.0": {
+        "prefix_rmse_m": 0.03991733390171812,
+        "forecast_rmse_m": 0.6966677760445622,
+        "final_error_m": 1.2430646364434412
+      },
+      "0.22": {
+        "prefix_rmse_m": 0.03460219285388024,
+        "forecast_rmse_m": 0.4893670737509943,
+        "final_error_m": 0.8627104264396286
+      },
+      "0.45": {
+        "prefix_rmse_m": 0.03392952664631938,
+        "forecast_rmse_m": 0.468803738097378,
+        "final_error_m": 0.8105166232521176
+      }
+    },
+    "note": "Conditional on A's segmentation. No spin measurements, goal or contact labels."
+  },
+  {
+    "prefix_frames": [
+      1144,
+      1145,
+      1146,
+      1147,
+      1148,
+      1149
+    ],
+    "forecast_frames": [
+      1150,
+      1151,
+      1152,
+      1153,
+      1154,
+      1155,
+      1156,
+      1157,
+      1158,
+      1159,
+      1160,
+      1161,
+      1162,
+      1163,
+      1164,
+      1165,
+      1166,
+      1167,
+      1168,
+      1169,
+      1170,
+      1171,
+      1172
+    ],
+    "models": {
+      "0.0": {
+        "prefix_rmse_m": 0.03229548354026354,
+        "forecast_rmse_m": 2.1794218785133013,
+        "final_error_m": 4.169411790988239
+      },
+      "0.22": {
+        "prefix_rmse_m": 0.02830494851042445,
+        "forecast_rmse_m": 1.5458361246236987,
+        "final_error_m": 2.876475765528441
+      },
+      "0.45": {
+        "prefix_rmse_m": 0.028457362032185934,
+        "forecast_rmse_m": 1.5837277374081826,
+        "final_error_m": 2.942361741540421
+      }
+    },
+    "note": "Conditional on A's segmentation. No spin measurements, goal or contact labels."
+  }
+]

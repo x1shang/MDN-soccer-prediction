@@ -1,0 +1,78 @@
+{
+  "sigma_2mm": {
+    "goal_probability_given_crossing": 0.9997999668121338,
+    "hdr_log_density_thresholds": {
+      "0.5": 2.2381186485290527,
+      "0.95": -0.07240454107522964
+    },
+    "mode_yz_m": [
+      2.6441,
+      1.8938
+    ],
+    "mean_yz_m": [
+      2.6414,
+      1.9221
+    ],
+    "wiener_anchor_yz_m": [
+      2.5326,
+      1.9125
+    ]
+  },
+  "sigma_5mm": {
+    "goal_probability_given_crossing": 0.9661999940872192,
+    "hdr_log_density_thresholds": {
+      "0.5": 0.9282193779945374,
+      "0.95": -1.5288718938827515
+    },
+    "mode_yz_m": [
+      2.6609,
+      1.7975
+    ],
+    "mean_yz_m": [
+      2.7051,
+      1.869
+    ],
+    "wiener_anchor_yz_m": [
+      2.6787,
+      1.8819
+    ]
+  },
+  "sigma_10mm": {
+    "goal_probability_given_crossing": 0.8179999589920044,
+    "hdr_log_density_thresholds": {
+      "0.5": -0.2965640127658844,
+      "0.95": -2.1293160915374756
+    },
+    "mode_yz_m": [
+      2.6432,
+      1.7209
+    ],
+    "mean_yz_m": [
+      2.9194,
+      1.897
+    ],
+    "wiener_anchor_yz_m": [
+      2.9065,
+      1.8343
+    ]
+  },
+  "sigma_15mm": {
+    "goal_probability_given_crossing": 0.6469999551773071,
+    "hdr_log_density_thresholds": {
+      "0.5": -0.5691449642181396,
+      "0.95": -2.2795209884643555
+    },
+    "mode_yz_m": [
+      2.6358,
+      1.7069
+    ],
+    "mean_yz_m": [
+      3.1243,
+      1.8919
+    ],
+    "wiener_anchor_yz_m": [
+      3.029,
+      1.8087
+    ]
+  }
+}

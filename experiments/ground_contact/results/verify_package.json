@@ -1,0 +1,140 @@
+{
+  "status_counts": {
+    "airborne_file": {
+      "0": 0,
+      "1": 88999,
+      "2": 11001,
+      "3": 0
+    },
+    "bounce_file": {
+      "0": 0,
+      "1": 88999,
+      "2": 0,
+      "3": 11001
+    }
+  },
+  "contact_kind": {
+    "0": 88999,
+    "1": 6636,
+    "2": 4365
+  },
+  "contact_count": {
+    "min": 1,
+    "max": 4,
+    "nonzero_contact_rows": 11001
+  },
+  "pairing": {
+    "theta_identical": true,
+    "anchor_identical": true,
+    "split_identical": true,
+    "endpoint_identical_on_direct": true,
+    "arrival_identical_on_direct": true,
+    "status_identical_on_direct": true,
+    "observations_identical_where_finite": true,
+    "finite_prefix_rows": 99049,
+    "nan_prefix_rows": 951,
+    "nan_prefix_all_ground_first": true
+  },
+  "indices": {
+    "train": {
+      "air": 71202,
+      "bounce": 80000,
+      "air_is_subset": true,
+      "order_preserved": true,
+      "bounce_status_direct": 71202,
+      "bounce_status_contact": 8798
+    },
+    "selection": {
+      "air": 4452,
+      "bounce": 5001,
+      "air_is_subset": true,
+      "order_preserved": true,
+      "bounce_status_direct": 4452,
+      "bounce_status_contact": 549
+    },
+    "calibration": {
+      "air": 4446,
+      "bounce": 4999,
+      "air_is_subset": true,
+      "order_preserved": true,
+      "bounce_status_direct": 4446,
+      "bounce_status_contact": 553
+    },
+    "test": {
+      "air": 8899,
+      "bounce": 10000,
+      "air_is_subset": true,
+      "order_preserved": true,
+      "bounce_status_direct": 8899,
+      "bounce_status_contact": 1101
+    }
+  },
+  "indices_partition_complete": true,
+  "test_rows_match_manifest": {
+    "train": 80000,
+    "selection": 5001,
+    "calibration": 4999,
+    "test": 10000
+  },
+  "in_frame": {
+    "direct_crossing_in_frame": 50214,
+    "contact_crossing_in_frame": 7761,
+    "contact_in_frame_bounce": 4805,
+    "contact_in_frame_rolling": 2956,
+    "total_in_frame": 57975,
+    "contact_rows_with_nonfinite_endpoint": 0,
+    "contact_endpoint_below_radius": 0,
+    "contact_arrival_nonfinite": 0
+  },
+  "manifest_consistency": {
+    "counts": true,
+    "split_totals": {
+      "train": [
+        true,
+        true,
+        true
+      ],
+      "selection": [
+        true,
+        true,
+        true
+      ],
+      "calibration": [
+        true,
+        true,
+        true
+      ],
+      "test": [
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "sensitivity_matches_data": {
+    "bounce_crossings": [
+      6636,
+      6636
+    ],
+    "rolling_crossings": [
+      4365,
+      4365
+    ],
+    "additional_in_frame": [
+      7761,
+      7761
+    ],
+    "baseline_airborne_in_frame": [
+      50214,
+      50214
+    ]
+  },
+  "both_arms_agree_on_test_n": {
+    "airborne": [
+      10000
+    ],
+    "bounce": [
+      10000
+    ]
+  }
+}

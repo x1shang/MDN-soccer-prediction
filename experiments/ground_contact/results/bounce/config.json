@@ -1,0 +1,58 @@
+{
+  "dataset_sha256": "46cf86a83d6749079f343a2b52440dc8cea7de0ee3c317f0ed7e6384c0fd5e10",
+  "indices_sha256": "b85c4941504f504e0c704bd2168f74f9c4e77fef56e86657b600095e18f900b2",
+  "arm": "bounce",
+  "evaluation_indices_sha256": "b85c4941504f504e0c704bd2168f74f9c4e77fef56e86657b600095e18f900b2",
+  "device": "cuda",
+  "mc": 256,
+  "checkpoint_sha256": "4d5adb59340c6c3bdc3a56500538470b696683a51098dcba316f7e3da9f95c22",
+  "architecture": {
+    "depth": 3,
+    "hidden_dim": 192,
+    "activation": "GELU",
+    "residual": true
+  },
+  "features": "phys_wiener_22d",
+  "k": 5,
+  "epochs": 100,
+  "seed": 11,
+  "parameters": 85470,
+  "seconds": 70.98249619999842,
+  "sizes": {
+    "train": 80000,
+    "selection": 5001,
+    "calibration": 4999,
+    "test": 10000
+  },
+  "selected_epoch": 99,
+  "calibration": {
+    "2": {
+      "scale_sd": 0.9888100591955519,
+      "hdr_mass": {
+        "0.5": 0.48828125,
+        "0.95": 0.94921875
+      }
+    },
+    "5": {
+      "scale_sd": 1.003392740111232,
+      "hdr_mass": {
+        "0.5": 0.50390625,
+        "0.95": 0.9453125
+      }
+    },
+    "10": {
+      "scale_sd": 1.0062475801857367,
+      "hdr_mass": {
+        "0.5": 0.50390625,
+        "0.95": 0.94921875
+      }
+    },
+    "15": {
+      "scale_sd": 0.9980110338749116,
+      "hdr_mass": {
+        "0.5": 0.50390625,
+        "0.95": 0.9453125
+      }
+    }
+  }
+}

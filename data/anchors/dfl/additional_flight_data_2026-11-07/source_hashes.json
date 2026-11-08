@@ -1,0 +1,18 @@
+[
+  {
+    "match": "J03WMX",
+    "local_source": "J03WMX_secondHalf_ball_native.csv",
+    "sha256": "00b9a48035d8e65d325342b9d0f010fdde0564d7b43b01c617e0a5366772984a"
+  },
+  {
+    "match": "J03WOH",
+    "local_source": "J03WOH_secondHalf_ball_native.csv",
+    "sha256": "70a068277cbdbddbf1cbe256fbdf7fbbf536c202bf4b63e37d93ced14ef5bb8a"
+  },
+  {
+    "match": "J03WR9",
+    "local_source": "J03WR9_secondHalf_ball_native.csv",
+    "sha256": "5f86364a9429bbbd0c6473b8ad6b6feb1fa4ac1e9ee357e5a8722b1fc399ad4c"
+  }
+]
+
